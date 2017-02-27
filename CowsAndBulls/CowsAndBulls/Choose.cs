@@ -11,10 +11,12 @@ namespace CowsAndBulls
         static public int[] Сonsequences()
         {
             //Choose
-            Console.Write("Choose your enemy:\n1.Pc\t2.Friend");
+            Console.Write("Choose your enemy:\n1.Pc\t2.Friend\n");
             int Enemy = int.Parse(Console.ReadLine());
             //Create variable for number
             int[] RightAnswer = new int[4];
+            Random rnd = new Random();
+
             //Сonsequences of choosing(последствия выбора)
             while (true)
             {
@@ -23,7 +25,7 @@ namespace CowsAndBulls
                 {
                     for (int a = 0; a < RightAnswer.Length; a++)
                     {
-                        Random rnd = new Random();
+                        RightAnswer[a] = rnd.Next(0, 9);
                     }
                     break;
                 }

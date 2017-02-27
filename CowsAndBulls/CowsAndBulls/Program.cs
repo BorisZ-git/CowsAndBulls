@@ -22,15 +22,16 @@ namespace CowsAndBulls
         {
             //Hello
             Console.Write("Introduce yourself: "); string PlayerName = Console.ReadLine();
-            Console.WriteLine("You choose who will be your enemy: PC or friend." +
-                "Your enemy wish a number like as 1234. You will have several attempts to answer right.");
-            //Choose
-            Console.Write("Choose your enemy:\n1.Pc\t2.Friend"); int Enemy = int.Parse(Console.ReadLine());
-            Console.Write("Enter attempts: "); int Attempt = int.Parse(Console.ReadLine());
-            //Сonsequences of choosing(последствия выбора)
-            if (Enemy == 1) ;
-            if (Enemy == 2) ;
-            else Console.WriteLine("You need enter the number");
+            Hello.Rule();
+            //Choose and take number and take value of attempts
+            int[] RightAnswer = Choose.Сonsequences();
+            int attempts = Choose.Attempt();
+            for (int a = 0; a < RightAnswer.Length;a++)
+            {
+                Console.Write(RightAnswer[a]);
+            }
+            Console.ReadLine();
+
         }
     }
 }
