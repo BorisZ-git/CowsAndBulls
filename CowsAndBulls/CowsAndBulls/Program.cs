@@ -26,6 +26,7 @@ namespace CowsAndBulls
             //Choose and take number and take value of attempts
             int[] RightAnswer = Choose.Сonsequences();
             int attempts = Choose.Attempt();
+            //inspection(Check work or not)
             for (int a = 0; a < RightAnswer.Length;a++)
             {
                 Console.Write(RightAnswer[a]);
