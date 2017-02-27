@@ -8,31 +8,40 @@ namespace CowsAndBulls
 {
     class Choose
     {
-        static public Array Сonsequences()
+        static public int[] Сonsequences()
         {
             //Choose
             Console.Write("Choose your enemy:\n1.Pc\t2.Friend");
             int Enemy = int.Parse(Console.ReadLine());
+            //Create variable for number
+            int[] RightAnswer = new int[4];
             //Сonsequences of choosing(последствия выбора)
-            for (int i = 0; i < 0;)
+            while (true)
             {
                 //PC use random
                 if (Enemy == 1)
                 {
-                    for (int a = 0; a < RightAnswer.Count; a++) ;
-                    Random rnd = new Random();
-                    int RightAnswer[];
-                    return RightAnswer;
+                    for (int a = 0; a < RightAnswer.Length; a++)
+                    {
+                        Random rnd = new Random();
+                    }
+                    break;
                 }
                 //User take number in array
                 if (Enemy == 2)
                 {
-                    return RightAnswer;
+                    for (int a = 0; a < RightAnswer.Length; a++)
+                    {
+                        Console.WriteLine("Enter your number: ");
+                        RightAnswer[a] = int.Parse(Console.ReadLine());//i wanna user enter full number
+                    }
+                    break;
                 }
                 //Catch wrong answer
                 else Console.WriteLine("You need enter the number: ");
             }
-           
+            return RightAnswer;
+
         }
         static public int Attempt()
         {
